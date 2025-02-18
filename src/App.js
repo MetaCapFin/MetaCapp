@@ -1,13 +1,18 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
+import LoanApplicationForm from './components/LoanApplicationForm';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Contractor Capital Access</h1>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/apply" element={<LoanApplicationForm />} />
+      </Routes>
+    </Router>
   );
 };
 
