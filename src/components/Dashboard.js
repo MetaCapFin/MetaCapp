@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   return (
     <Container>
-      <Box mb={4} mt={2}> {/* Add margin-bottom and margin-top */}
+      <Box mb="60px"> {/* Set margin-bottom to 60px */}
         <Typography variant="h4" gutterBottom>
           Welcome to Contractor Capital Access
         </Typography>
