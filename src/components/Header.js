@@ -1,15 +1,12 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 
 const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6">
-          Contractor Capital Access
-        </Typography>
+        <img src="https://github.com/MetaCapFin/MetaCapp/blob/main/backend/assets/LogoName.png" alt="Logo Name" style={{ height: '40px' }} />
       </Toolbar>
     </AppBar>
   );
