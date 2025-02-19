@@ -1,7 +1,14 @@
 import React from 'react';
 import { Container, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const handleApplyNow = () => {
+    navigate('/apply');
+  };
+
   return (
     <Container>
       <Typography variant="h4" gutterBottom>
@@ -12,7 +19,7 @@ const Dashboard = () => {
           <Card>
             <CardContent>
               <Typography variant="h6">Apply for Loan</Typography>
-              <Button variant="contained" color="primary" fullWidth>
+              <Button variant="contained" color="primary" fullWidth onClick={handleApplyNow}>
                 Apply Now
               </Button>
             </CardContent>
@@ -91,5 +98,7 @@ const Dashboard = () => {
     </Container>
   );
 };
+
+export default Dashboard;
 
 export default Dashboard;
