@@ -1,11 +1,12 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import './Header.css';
 
 const Header = () => {
   return (
-    <AppBar position="static" style={{ background: 'linear-gradient(to bottom, black, rgba(0, 0, 0, 0))' }}>
-      <Toolbar>
+    <AppBar position="static" className="header-gradient">
+      <Toolbar className="header-toolbar">
         <img src="/LogoName.png" alt="Logo Name" style={{ height: '40px' }} />
       </Toolbar>
     </AppBar>
