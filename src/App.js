@@ -11,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/apply" element={<LoanApplicationForm />} />
+        <Route path="*" element={<Dashboard />} /> {/* Default route */}
       </Routes>
     </Router>
   );
