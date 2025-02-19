@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <img src="https://github.com/MetaCapFin/MetaCapp/blob/main/backend/assets/LogoName.png" alt="Logo Name" style={{ height: '40px' }} />
+        <img src="/LogoName.png" alt="Logo Name" style={{ height: '40px' }} />
       </Toolbar>
     </AppBar>
   );
