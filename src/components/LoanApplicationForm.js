@@ -1,59 +1,102 @@
-import React, { useState } from 'react';
-import { TextField, Button, Container, Typography } from '@mui/material';
+import React from 'react';
+import { Container, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-const LoanApplicationForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    amount: '',
-    purpose: '',
-  });
+const Dashboard = () => {
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
+  const handleApplyNow = () => {
+    navigate('/apply');
   };
 
   return (
     <Container>
-      <Typography variant="h5" gutterBottom>
-        Loan Application
+      <Typography variant="h4" gutterBottom>
+        Welcome to Contractor Capital Access
       </Typography>
-      <form onSubmit={handleSubmit}>
-        <TextField
-          label="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="Amount"
-          name="amount"
-          value={formData.amount}
-          onChange={handleChange}
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="Purpose"
-          name="purpose"
-          value={formData.purpose}
-          onChange={handleChange}
-          fullWidth
-          margin="normal"
-        />
-        <Button type="submit" variant="contained" color="primary">
-          Submit
-        </Button>
-      </form>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Apply for Loan</Typography>
+              <Button variant="contained" color="primary" fullWidth onClick={handleApplyNow}>
+                Apply Now
+              </Button>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Fractional CFO Services</Typography>
+              <Button variant="contained" color="primary" fullWidth>
+                Learn More
+              </Button>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">My Account</Typography>
+              <Button variant="contained" color="primary" fullWidth>
+                View Account
+              </Button>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Financial Overview</Typography>
+              <Typography variant="body1">Available Capital: $50,000</Typography>
+              <Typography variant="body1">Outstanding Loans: $20,000</Typography>
+              <Typography variant="body1">Recent Transactions: $5,000</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Upcoming Deadlines</Typography>
+              <Typography variant="body1">Loan Repayment: March 15, 2025</Typography>
+              <Typography variant="body1">Financial Report: April 1, 2025</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Notifications</Typography>
+              <Typography variant="body1">You have 3 new messages.</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Resources</Typography>
+              <Typography variant="body1">
+                <a href="#">Guide to Capital Funding</a>
+              </Typography>
+              <Typography variant="body1">
+                <a href="#">Financial Management Tips</a>
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Contact Information</Typography>
+              <Typography variant="body1">Email: support@contractorcapital.com</Typography>
+              <Typography variant="body1">Phone: (123) 456-7890</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
 
-export default LoanApplicationForm;
+export default Dashboard;
