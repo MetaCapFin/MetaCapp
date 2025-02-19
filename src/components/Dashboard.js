@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import { Container, Typography, Button, Grid, Card, CardContent, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -11,9 +11,11 @@ const Dashboard = () => {
 
   return (
     <Container>
-      <Typography variant="h4" gutterBottom>
-        Welcome to Contractor Capital Access
-      </Typography>
+      <Box mb={4}> {/* Add margin-bottom to create space */}
+        <Typography variant="h4" gutterBottom>
+          Welcome to Contractor Capital Access
+        </Typography>
+      </Box>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={4}>
           <Card>
